@@ -9,7 +9,7 @@ The complete program was created as a group project and included the files in th
 
 This repository includes only a part of the complete program, namely the core logic of the ValencyRelationshipRecognizer. To get a first view of what this program does, a small example for the word "kämpfen" is included. For this, 27 example sentences are used for a valency analysis.
 
-The dependency trees for this program, the tokens and the lemmata were created using the ParZu dependency tree parser of the university of Zurich. For further information information on ParZu, visit https://github.com/rsennrich/ParZu.
+The dependency trees for this program, the tokens and the lemmata were created using the ParZu dependency tree parser of the university of Zurich. For further information on ParZu, visit https://github.com/rsennrich/ParZu.
 
 The theoretical information regarding valency frames were aquired from the institue of German language in Mannheim (Institut für deutsche Sprache Mannheim) via their grammis information system. For further information, visit https://grammis.ids-mannheim.de/.
 
