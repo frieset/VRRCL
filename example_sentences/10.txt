@@ -1,0 +1,8 @@
+sentence:Die Medizin kämpft mit dem Problem der weltweiten Zunahme von Infektionskrankheiten. 
+sentence_id:10
+word_ids:1;2;3;4;5;6;7;8;9;10;11;12
+words:Die;Medizin;kämpft;mit;dem;Problem;der;weltweiten;Zunahme;von;Infektionskrankheiten;.
+lemmata:die;Medizin;kämpfen;mit;die;Problem;die;weltweit;Zunahme;von;Infektionskrankheit;.
+tree_data:2,1,det;3,2,subj;3,4,pp;6,5,det;4,6,pn;9,7,det;9,8,attr;6,9,gmod;9,10,pp;10,11,pn
+Quelle des Satzes: https://grammis.ids-mannheim.de/verbs/view/400697/4
+letzte Abfrage: 30.05.2019

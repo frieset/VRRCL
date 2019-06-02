@@ -1,0 +1,8 @@
+sentence:Wird ihr Mitleid, das mit ihrer Verachtung kämpft, am Ende doch stärker sein? 
+sentence_id:13
+word_ids:1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16
+words:Wird;ihr;Mitleid;,;das;mit;ihrer;Verachtung;kämpft;,;am;Ende;doch;stärker;sein;?
+lemmata:werden;ihre;Mitleid;,;die;mit;ihre;Verachtung;kämpfen;,;an;Ende;doch;stark;sein;?
+tree_data:3,2,det;1,3,subj;9,5,subj;9,6,pp;8,7,det;6,8,pn;3,9,rel;15,11,pp;11,12,pn;15,13,adv;15,14,pred;1,15,aux
+Quelle des Satzes: https://grammis.ids-mannheim.de/verbs/view/400697/6
+letzte Abfrage: 30.05.2019

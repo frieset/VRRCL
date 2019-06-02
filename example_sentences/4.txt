@@ -1,0 +1,9 @@
+sentence:Größere Buchhandlungen kämpfen inzwischen mit versteckten Videokameras gegen den ungewollten Exodus ihrer Bücher.
+sentence_id:4
+word_ids:1;2;3;4;5;6;7;8;9;10;11;12;13;14
+words:Größere;Buchhandlungen;kämpfen;inzwischen;mit;versteckten;Videokameras;gegen;den;ungewollten;Exodus;ihrer;Bücher;.
+lemmata:groß;Buchhandlung;kämpfen;inzwischen;mit;versteckt;Videokamera;gegen;die;ungewollt;Exodus;ihre;Buch;.
+tree_data:2,1,attr;3,2,subj;3,4,adv;3,5,pp;7,6,attr;5,7,pn;3,8,pp;11,9,det;11,10,attr;8,11,pn;13,12,det;11,13,gmod
+Quelle des Satzes: https://grammis.ids-mannheim.de/verbs/view/400697/1
+letzte Abfrage: 30.05.2019
+Quelle laut IDS Mannheim Evalbu: nach Berliner Zeitung, 15.08.1998, S. 20

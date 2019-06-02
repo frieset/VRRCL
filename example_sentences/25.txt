@@ -1,0 +1,8 @@
+sentence:Die Alliierten haben gemeinsam gegen den Faschismus für die Befreiung Europas gekämpft. 
+sentence_id:25
+word_ids:1;2;3;4;5;6;7;8;9;10;11;12;13
+words:Die;Alliierten;haben;gemeinsam;gegen;den;Faschismus;für;die;Befreiung;Europas;gekämpft;.
+lemmata:die;Alliierte;haben;gemeinsam;gegen;die;Faschismus;für;die;Befreiung;Europa;kämpfen;.
+tree_data:2,1,det;3,2,subj;5,4,adv;12,5,pp;7,6,det;5,7,pn;12,8,pp;10,9,det;8,10,pn;10,11,gmod;3,12,aux
+Quelle des Satzes: https://grammis.ids-mannheim.de/verbs/view/400697/12
+letzte Abfrage: 30.05.2019

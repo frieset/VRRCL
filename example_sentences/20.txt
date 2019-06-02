@@ -1,0 +1,9 @@
+sentence:Auch Tarzan kämpft mal mit einem Tiger, obwohl der in Afrika eigentlich nichts zu suchen hat.
+sentence_id:20
+word_ids:1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18
+words:Auch;Tarzan;kämpft;mal;mit;einem;Tiger;,;obwohl;der;in;Afrika;eigentlich;nichts;zu;suchen;hat;.
+lemmata:auch;Tarzan;kämpfen;mal;mit;eine;Tiger;,;obwohl;die;in;Afrika;eigentlich;nichts;zu;suchen;haben;.
+tree_data:2,1,adv;3,2,subj;3,4,adv;3,5,pp;7,6,det;5,7,pn;17,9,konj;17,10,subj;16,11,pp;11,12,pn;16,13,adv;16,14,obja;16,15,part;17,16,aux;3,17,neb
+Quelle des Satzes: https://grammis.ids-mannheim.de/verbs/view/400697/9
+letzte Abfrage: 30.05.2019
+Quelle laut IDS Mannheim Evalbu: Berliner Morgenpost, 10.11.1999, S. 23

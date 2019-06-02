@@ -1,0 +1,8 @@
+sentence:Es ist gar nicht so selten, dass nach dem Tod der Eltern der Bruder mit dem Bruder vor Gericht um das Erbe kämpft.
+sentence_id:23
+word_ids:1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;21;22;23;24;25
+words:Es;ist;gar;nicht;so;selten;,;dass;nach;dem;Tod;der;Eltern;der;Bruder;mit;dem;Bruder;vor;Gericht;um;das;Erbe;kämpft;.
+lemmata:es;sein;gar;nicht;so;selten;,;dass;nach;die;Tod;die;Elter;die;Bruder;mit;die;Bruder;vor;Gericht;um;die;Erbe;kämpfen;.
+tree_data:24,1,expl;4,3,adv;2,4,adv;6,5,adv;2,6,pred;24,8,konj;24,9,pp;11,10,det;9,11,pn;13,12,det;11,13,gmod;15,14,det;24,15,subj;24,16,pp;18,17,det;16,18,pn;24,19,pp;19,20,pn;24,21,pp;23,22,det;21,23,pn;2,24,subjc
+Quelle des Satzes: https://grammis.ids-mannheim.de/verbs/view/400697/11
+letzte Abfrage: 30.05.2019

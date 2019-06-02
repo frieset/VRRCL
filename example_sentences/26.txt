@@ -1,0 +1,8 @@
+sentence:Der Plan sah eine Amnestie für die Guerillatruppen vor, die in dieser Region für die Unabhängigkeit gekämpft hatten. 
+sentence_id:26
+word_ids:1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20
+words:Der;Plan;sah;eine;Amnestie;für;die;Guerillatruppen;vor;,;die;in;dieser;Region;für;die;Unabhängigkeit;gekämpft;hatten;.
+lemmata:die;Plan;sehen;eine;Amnestie;für;die;Guerillatruppe;vor;,;die;in;diese;Region;für;die;Unabhängigkeit;kämpfen;haben;.
+tree_data:2,1,det;3,2,subj;5,4,det;3,5,obja;5,6,pp;8,7,det;6,8,pn;3,9,avz;19,11,subj;18,12,pp;14,13,det;12,14,pn;18,15,pp;17,16,det;15,17,pn;19,18,aux;8,19,rel
+Quelle des Satzes: https://grammis.ids-mannheim.de/verbs/view/400697/12
+letzte Abfrage: 30.05.2019

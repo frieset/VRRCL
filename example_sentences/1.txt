@@ -1,0 +1,9 @@
+sentence:Bergungsmannschaften kämpften sich durch Trümmer und Schlamm.
+sentence_id:1
+word_ids:1;2;3;4;5;6;7;8
+words:Bergungsmannschaften;kämpften;sich;durch;Trümmer;und;Schlamm;.
+lemmata:Bergungsmannschaft;kämpfen;sie;durch;Trumm;und;Schlamm;.
+tree_data:2,1,subj;2,3,obja;2,4,objp;4,5,pn;5,6,kon;6,7,cj
+Quelle des Satzes: https://grammis.ids-mannheim.de/verbvalenz/400697
+letzte Abfrage: 30.05.2019
+Quelle laut IDS Mannheim Evalbu: Bild, 21.04.1967, S. 2

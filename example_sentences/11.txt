@@ -1,0 +1,8 @@
+sentence:Nach Meinung von Insidern kämpft die Partei mit dem Entschluss, sich in der Steuerpolitik vom Koalitionspartner loszusagen. 
+sentence_id:11
+word_ids:1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19
+words:Nach;Meinung;von;Insidern;kämpft;die;Partei;mit;dem;Entschluss;,;sich;in;der;Steuerpolitik;vom;Koalitionspartner;loszusagen;.
+lemmata:nach;Meinung;von;Insider;kämpfen;die;Partei;mit;die;Entschluss;,;sie;in;die;Steuerpolitik;von;Koalitionspartner;lossagen;.
+tree_data:5,1,pp;1,2,pn;2,3,pp;3,4,pn;7,6,det;5,7,subj;5,8,pp;10,9,det;8,10,pn;18,12,obja;18,13,pp;15,14,det;13,15,pn;18,16,objp;16,17,pn;10,18,obji
+Quelle: https://grammis.ids-mannheim.de/verbs/view/400697/5
+letzte Abfrage: 30.05.2019

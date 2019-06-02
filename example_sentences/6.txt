@@ -1,0 +1,9 @@
+sentence:Die Gerichte hatten die Berliner Behörde, die jahrelang in diesen beiden Verfahren hartnäckig gegen die Handelskonzerne gekämpft hatte, abfahren lassen.
+sentence_id:6
+word_ids:1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;21;22;23
+words:Die;Gerichte;hatten;die;Berliner;Behörde;,;die;jahrelang;in;diesen;beiden;Verfahren;hartnäckig;gegen;die;Handelskonzerne;gekämpft;hatte;,;abfahren;lassen;.
+lemmata:die;Gericht;haben;die;Berliner;Behörde;,;die;jahrelang;in;diese;beide;Verfahren;hartnäckig;gegen;die;Handelskonzern;kämpfen;haben;,;abfahren;lassen;.
+tree_data:2,1,det;3,2,subj;6,4,det;6,5,attr;22,6,obja;19,8,subj;18,9,adv;18,10,pp;13,11,det;13,12,attr;10,13,pn;18,14,adv;18,15,pp;17,16,det;15,17,pn;19,18,aux;6,19,rel;22,21,obji;3,22,aux
+Quelle des Satzes: https://grammis.ids-mannheim.de/verbs/view/400697/2
+letzte Abfrage: 30.05.2019
+Quelle laut IDS Mannheim Evalbu: Mannheimer Morgen, 30.01.1988, S. 5

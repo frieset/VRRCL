@@ -1,0 +1,8 @@
+sentence:Es ist weithin zu hören, wenn ein Hirsch mit seinem Rivalen kämpft. 
+sentence_id:19
+word_ids:1;2;3;4;5;6;7;8;9;10;11;12;13;14
+words:Es;ist;weithin;zu;hören;,;wenn;ein;Hirsch;mit;seinem;Rivalen;kämpft;.
+lemmata:es;sein;weithin;zu;hören;,;wenn;eine;Hirsch;mit;seine;Rivale;kämpfen;.
+tree_data:2,1,subj;5,3,adv;5,4,part;2,5,aux;13,7,konj;9,8,det;13,9,subj;13,10,pp;12,11,det;10,12,pn;5,13,neb
+Quelle des Satzes: https://grammis.ids-mannheim.de/verbs/view/400697/9
+letzte Abfrage: 30.05.2019

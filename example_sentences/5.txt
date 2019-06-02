@@ -1,0 +1,9 @@
+sentence:Professoren kämpfen seit Jahrzehnten mit zornigen Argumenten und nun sogar mit einem Gesetzesvorschlag gegen den Bundesgerichtshof.
+sentence_id:5
+word_ids:1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17
+words:Professoren;kämpfen;seit;Jahrzehnten;mit;zornigen;Argumenten;und;nun;sogar;mit;einem;Gesetzesvorschlag;gegen;den;Bundesgerichtshof;.
+lemmata:Professor;kämpfen;seit;Jahrzehnt;mit;zornig;Argument;und;nun;sogar;mit;eine;Gesetzesvorschlag;gegen;die;Bundesgerichtshof;.
+tree_data:2,1,subj;2,3,pp;3,4,pn;2,5,pp;7,6,attr;5,7,pn;5,8,kon;10,9,adv;8,10,cj;2,11,pp;13,12,det;11,13,pn;2,14,pp;16,15,det;14,16,pn
+Quelle des Satzes: https://grammis.ids-mannheim.de/verbs/view/400697/2
+letzte Abfrage: 30.05.2019
+Quelle laut IDS Mannheim Evalbu: nach Zeit, 19.06.1987, S. 52

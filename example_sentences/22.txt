@@ -1,0 +1,8 @@
+sentence:Wir beobachteten vom Ufer aus, wie das kleine Boot gegen den Sturm und mit den hohen Wellen kämpfte. 
+sentence_id:22
+word_ids:1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20
+words:Wir;beobachteten;vom;Ufer;aus;,;wie;das;kleine;Boot;gegen;den;Sturm;und;mit;den;hohen;Wellen;kämpfte;.
+lemmata:wir;beobachten;von;Ufer;aus;,;wie;die;klein;Boot;gegen;die;Sturm;und;mit;die;hoch;Welle;kämpfen;.
+tree_data:2,1,subj;2,3,pp;3,4,pn;3,5,part;19,7,konj;10,8,det;10,9,attr;19,10,subj;19,11,pp;13,12,det;11,13,pn;11,14,kon;14,15,cj;18,16,det;18,17,attr;15,18,pn;2,19,objc
+Quelle des Satzes: https://grammis.ids-mannheim.de/verbs/view/400697/10
+letzte Abfrage: 30.05.2019

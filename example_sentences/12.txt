@@ -1,0 +1,8 @@
+sentence:Petra kämpft schon seit langem mit dem Gedanken, sich scheiden zu lassen. 
+sentence_id:12
+word_ids:1;2;3;4;5;6;7;8;9;10;11;12;13;14
+words:Petra;kämpft;schon;seit;langem;mit;dem;Gedanken;,;sich;scheiden;zu;lassen;.
+lemmata:Petra;kämpfen;schon;seit;langem;mit;die;Gedanke;,;sie;scheiden;zu;lassen;.
+tree_data:2,1,subj;2,3,adv;2,4,pp;4,5,pn;2,6,pp;8,7,det;6,8,pn;11,10,obja;13,11,obji;13,12,part;8,13,obji
+Quelle des Satzes: https://grammis.ids-mannheim.de/verbs/view/400697/5
+letzte Abfrage: 30.05.2019

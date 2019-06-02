@@ -1,0 +1,9 @@
+sentence:Beide Teams hatten gegen die starke Mannschaft vom Turnverein Sirnach glücklos gekämpft.
+sentence_id:27
+word_ids:1;2;3;4;5;6;7;8;9;10;11;12;13
+words:Beide;Teams;hatten;gegen;die;starke;Mannschaft;vom;Turnverein;Sirnach;glücklos;gekämpft;.
+lemmata:beide;Team;haben;gegen;die;stark;Mannschaft;von;Turnverein;Sirnach;glücklos;kämpfen;.
+tree_data:2,1,det;3,2,subj;12,4,pp;7,5,det;7,6,attr;4,7,pn;7,8,pp;8,9,pn;9,10,app;12,11,adv;3,12,aux
+Quelle des Satzes: https://grammis.ids-mannheim.de/verbs/view/400697/13
+letzte Abfrage: 30.05.2019
+Quelle laut IDS Mannheim Evalbu: St. Galler Tagblatt, 12.01.1999

@@ -1,0 +1,8 @@
+sentence:Ich habe lange mit mir gekämpft und bin zu dem Entschluss gekommen, den Kompromiss zu akzeptieren. 
+sentence_id:2
+word_ids:1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18
+words:Ich;habe;lange;mit;mir;gekämpft;und;bin;zu;dem;Entschluss;gekommen;,;den;Kompromiss;zu;akzeptieren;.
+lemmata:ich;haben;lange;mit;ich;kämpfen;und;sein;zu;die;Entschluss;kommen;,;die;Kompromiss;zu;akzeptieren;.
+tree_data:2,1,subj;6,3,adv;6,4,pp;4,5,pn;2,6,aux;2,7,kon;7,8,cj;12,9,objp;11,10,det;9,11,pn;8,12,aux;15,14,det;17,15,obja;17,16,part;12,17,obji
+Quelle des Satzes: https://grammis.ids-mannheim.de/verbvalenz/400697
+letzte Abfrage: 30.05.2019

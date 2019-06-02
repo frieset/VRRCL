@@ -1,0 +1,9 @@
+sentence:Der schwule Bundeswehroffizier kämpft um seine Karriere.
+sentence_id:17
+word_ids:1;2;3;4;5;6;7;8
+words:Der;schwule;Bundeswehroffizier;kämpft;um;seine;Karriere;.
+lemmata:die;schwul;Bundeswehroffizier;kämpfen;um;seine;Karriere;.
+tree_data:3,1,det;3,2,attr;4,3,subj;4,5,pp;7,6,det;5,7,pn
+Quelle des Satzes: https://grammis.ids-mannheim.de/verbs/view/400697/8
+letzte Abfrage: 30.05.2019
+Quelle laut IDS Mannheim Evalbu: Berliner Zeitung, 27.06.1998, S. 19

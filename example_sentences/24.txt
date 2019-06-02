@@ -1,0 +1,9 @@
+sentence:Am Ende kämpft Frodo mit Gollum um den Ring.
+sentence_id:24
+word_ids:1;2;3;4;5;6;7;8;9;10
+words:Am;Ende;kämpft;Frodo;mit;Gollum;um;den;Ring;.
+lemmata:an;Ende;kämpfen;Frodo;mit;Gollum;um;die;Ring;.
+tree_data:3,1,pp;1,2,pn;3,4,subj;3,5,pp;5,6,pn;3,7,pp;9,8,det;7,9,pn
+Quelle des Satzes: https://grammis.ids-mannheim.de/verbs/view/400697/11
+letzte Abfrage: 30.05.2019
+Quelle laut IDS Mannheim Evalbu: die tageszeitung, 17.12.2003, S. 17,
