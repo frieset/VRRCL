@@ -2,7 +2,7 @@ from core_logic.node import Node
 
 import logging
 
-logger = logging.getLogger('ValancyRelationshipRecognizer')
+logger = logging.getLogger('VRRCL')
 
 
 class Complement:

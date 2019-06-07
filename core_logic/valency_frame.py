@@ -274,7 +274,7 @@ class ValencyFrame:
         if new_dep_class_pattern_mapping.__class__ is not dict:
             raise ValencyFrameError(5)
         elif len(list(x for x in new_dep_class_pattern_mapping.keys())) == 0:
-            raise ValencyFrameError(5)
+            raise ValencyFrameError(6)
         else:
             for new_key in new_dep_class_pattern_mapping.keys():
                 if new_key.__class__ is not tuple:

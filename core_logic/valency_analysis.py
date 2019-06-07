@@ -8,7 +8,7 @@ from core_logic.various_errors import ValencyAnalysisError
 
 import logging
 
-logger = logging.getLogger('ValancyRelationshipRecognizer')
+logger = logging.getLogger('VRRCL')
 
 
 class ValencyAnalysis:

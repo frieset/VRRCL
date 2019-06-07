@@ -1,11 +1,11 @@
 import core_logic.valency_analysis as VA
-from core_logic.various_errors import KMeanError
+from core_logic.various_errors import KMeanError, ValencyAnalysisError, ValencyFrameError
 import os
 import argparse
 
 import logging
 
-logger = logging.getLogger('ValancyRelationshipRecognizer')
+logger = logging.getLogger('VRRCL')
 handler = logging.StreamHandler()
 formatter = logging.Formatter('%(asctime)s [%(levelname)s] %(message)s', datefmt='%d.%m.%Y %H:%M:%S')
 handler.setFormatter(formatter)
@@ -29,6 +29,8 @@ def load_data():
             lemmata = list()
             tree = list()
             for line in file_object:
+                if line.find(":") == -1:
+                    continue
                 raw_data = line.split(":")
                 if raw_data[1].startswith(" "):
                     continue
@@ -65,7 +67,8 @@ def load_data():
         logger.info("{sen}".format(sen=raw_data_set[4]))
     return raw_data_list
 
-def analyse_examples(raw_data, verb):
+
+def analyse_examples(raw_data, args):
     """
     analysis of example sentences:
     1. correction of adverbial complements to prepositional complements
@@ -77,25 +80,69 @@ def analyse_examples(raw_data, verb):
     :type raw_data: list
     :return: no return value
     """
-    new_analysis = VA.ValencyAnalysis(raw_data, verb)
-    new_analysis.initialize_valency_frame(main_prime=False)
+    new_analysis = VA.ValencyAnalysis(raw_data, args.verb)
+    if args.main:
+        new_analysis.initialize_valency_frame(main_prime=True)
+    else:
+        new_analysis.initialize_valency_frame(main_prime=False)
+    if not args.no_kmone:
+        try:
+            new_analysis.correct_kadv_kprp(args.kmonecq, args.kmonemt, clusters_to_keep=args.kmoneck)
+        except KMeanError as kme:
+            logger.warning("Fehler beim 1. K-Mean-Aufruf")
+            logger.warning(kme)
+            return
+        except ValencyAnalysisError as vae:
+            logger.warning("Fehler beim 1. K-Mean-Aufruf")
+            logger.warning(vae)
+            return
+        except ValencyFrameError as vfe:
+            logger.warning("Fehler beim 1. K-Mean-Aufruf")
+            logger.warning(vfe)
+            return
+        logger.debug("Postprocessing - Correction of Kadv to Kprp")
+        logger.debug(new_analysis)
     try:
-        new_analysis.correct_kadv_kprp(3, 10, clusters_to_keep=1)
-    except KMeanError as kme:
-        logger.warning(kme)
+        new_analysis.delete_complements_from_frame([10, 11, 12, 13, 14, 15, 16, 100], keep=False)
+    except ValencyAnalysisError as vae:
+        logger.warning("Fehler beim löschen von Komplementsignaturen für internern Gebrauch")
+        logger.warning(vae)
         return
-    new_analysis.delete_complements_from_frame([10, 11, 12, 13, 14, 15, 16, 100], keep=False)
-    new_analysis.delete_multiple_complements_from_frame(2)
-    logger.debug("Postprocessing - Correction of Kadv to Kprp, deletion of multiple complements and complements for internal use:")
+    except ValencyFrameError as vfe:
+        logger.warning("Fehler beim löschen von Komplementsignaturen für internern Gebrauch")
+        logger.warning(vfe)
+        return
+    try:
+        new_analysis.delete_multiple_complements_from_frame(2)
+    except ValencyAnalysisError as vae:
+        logger.warning(vae)
+        logger.warning("Fehler beim löschen von Komplementen mit Anzahl >2")
+        return
+    except ValencyFrameError as vfe:
+        logger.warning("Fehler beim löschen von Komplementen mit Anzahl >2")
+        logger.warning(vfe)
+        return
+    logger.debug("Postprocessing - deletion of multiple complements and complements for internal use:")
     logger.debug(new_analysis)
-    try:
-        new_analysis.delete_rare_signatures_from_frame_by_k_mean(4, 10, clusters_to_keep=3)
-    except KMeanError as kme:
-        logger.warning(kme)
-        return
-    logger.debug("Further postprocessing - Deletion of all rare signatures via K-Means:")
+    if not args.no_kmtwo:
+        try:
+            new_analysis.delete_rare_signatures_from_frame_by_k_mean(args.kmtwocq, args.kmtwomt, clusters_to_keep=args.kmtwock)
+        except KMeanError as kme:
+            logger.warning("Fehler beim 2. K-Mean-Aufruf")
+            logger.warning(kme)
+            return
+        except ValencyAnalysisError as vae:
+            logger.warning("Fehler beim 2. K-Mean-Aufruf")
+            logger.warning(vae)
+            return
+        except ValencyFrameError as vfe:
+            logger.warning("Fehler beim 2. K-Mean-Aufruf")
+            logger.warning(vfe)
+            return
+        logger.debug("postprocessing - Deletion of all rare signatures via K-Means:")
     logger.info("~~~~~~~~~~~~~~Result of analysis~~~~~~~~~~~~~~")
     logger.info(new_analysis)
+
 
 def initialize_argparser():
     """
@@ -103,8 +150,26 @@ def initialize_argparser():
     :return: args
     """
     argparser = argparse.ArgumentParser(description="Valancy Relationship Recognizer")
-    argparser.add_argument("--verbose", help="Verbose output", action="store_true")
-    argparser.add_argument("--verb", help="specify verb for valency analysis", default="kämpfen", action="store", dest="verb")
+    argparser.add_argument("--verbose", help="detailed information on created sentences and all clustering attempts via k-means",
+                           action="store_true")
+    argparser.add_argument("--verb", help="specify verb for valency analysis", default="kämpfen", action="store",
+                           dest="verb", type=str)
+    argparser.add_argument("--kmone_cq", help="k-means cluster quantity for correction of kadv to kprp, default = 3",
+                           action="store", dest="kmonecq", default="3", type=int)
+    argparser.add_argument("--kmone_ck", help="number of clusters that should be kept during correction of kadv to kprp "
+                            "via k-means, default = 1", action="store", dest="kmoneck", default="1", type=int)
+    argparser.add_argument("--kmone_mt", help="number of maximum tries for correction of kadv to kprp via k-means, default = 10",
+                           action="store", dest="kmonemt", default="10", type=int)
+    argparser.add_argument("--no_kmone", help="no correction of Kadv to Kprp will be done", action="store_true")
+    argparser.add_argument("--kmtwo_cq", help="k-means cluster quantity for deletion of rare complement sginatures, default = 4",
+                           action="store", dest="kmtwocq", default="4", type=int)
+    argparser.add_argument("--kmtwo_mt", help="number of maximum tries for deletion of rare complemet signatures via k-means, default = 10",
+                           action="store", dest="kmtwomt", default="10", type=int)
+    argparser.add_argument("--kmtwo_ck", help="number of clusters that should be kept during deletion of rare complemtn class"
+                            "signatures, default = 3", action="store", dest="kmtwock", default="3", type=int)
+    argparser.add_argument("--no_kmtwo", help="no further postprocessing will be done after deletion of "
+                                "multiple complements", action="store_true")
+    argparser.add_argument("--main", help="use only main sentences for valency frame analysis", action="store_true")
     args = argparser.parse_args()
     return args
 
@@ -118,7 +183,7 @@ def main():
     if args.verbose:
         logger.setLevel(logging.DEBUG)
     raw_data = load_data()
-    analyse_examples(raw_data, args.verb)
+    analyse_examples(raw_data, args)
 
 
 if __name__ == '__main__':

@@ -19,22 +19,42 @@ License
 This software is licensed under the GNU General Public license. See LICENSE for further information. 
 
 
-Requirements and Installation
------------------------------
+Requirements
+------------
 This software was created for and tested with Python 3.7. No further modules are required. However, the input for this program needs to be preprocessed with the ParZu dependency tree parser. 
+
+
+Input Format
+------------
+Each file in the directory example_sentences requires the following keywords: sentence, sentence_id, word_ids, words, lemmata and tree_data. Each keyword needs to be followed by a ":" and the respective data without a space anywhere in the line (except in the actual sentence, of course). The entries in the lines with the keywords word_id, words, lemmata and tree_data should be separated by a ";". Further lines can be added for your own customisation but should not contain a ":" or if they contain a ":" it should be immediately followed by whitespace.
+1. sentence: The actual sentence to be used for the analysis. 
+2. sentence_id: A sentence id to keep track of which sentences have which complement class pattern.
+3. word_ids: An integer as representation for every word in the sentence. These do not need to be consecutive (as in the given examples) but they need to correspond to the tree_data below and be in the order that the corresponding words have in the sentence.
+4. words: Pre-Tokenized words for this sentence in the order they occur in the sentence.
+5. lemmata: The lemma for each word in the sentence in the order they occur in the sentence.
+6. tree_data: A representation of the dependency tree. Each edge of the tree should be contained in this line in the format "vertex1,vertex2,label". Edges do not need to be in a particular order.
 
 
 Example Use
 -----------
 The directory example_sentences includes 27 sample files with one sentence each. The files also include the preprocessed data required for each sentence, i.e. the tokens and lemmata for each sentence as well as the dependency tree. You can execute the file example_analysis.py to get a simple console output for these examples:
 
-First, a list of all sentences used for this analysis is given. Then, the Initial analysis without postprocessing is shown. Lastly, the final result of the analysis is written to the console. This final result includes three different pruning steps: 1. Removal of all complement classes for internal use. 2. Removal of all complement classes with a count greater than two. 3. Removal of all rare complement class patterns.   
+First, a list of all sentences used for this analysis is given. Then, the initial analysis without postprocessing is shown. Lastly, you can see the result of the valency analysis.
 
-You can also get detailed information on the analysis by using the option --verbose. This option gives more specific information regarding the sentences used for the analysis as well as the state of the analysis at various points. This option also includes an overview of the results of the K-Means algorithm.
+The analysis can be broken down into 3 main steps:
+
+1. As prepositional complements are in most cases not identified correctly by the dependency tree, the program searches for the most common prepositions and changes their complement class to Kprp (prepositional complement). 
+2. Complement classes only used internally are removed and the number of every complement class is reduced to a maximum of 2.
+3. The most common complement class signatures of all sentences are selected.
+
+Steps 1 and 3 include a clustering of some objects (prepositions in step 1, complement class signatures in step 3) and the removal of the "worst" clusters, i.e. the clusters with the least common prepositions or signatures. The parameters used for these clustering attempts can be changed via the arguments the program receives. Use the help option for further information. The parameters used in this example were the best parameters according to the evaluation of the group project that the original program was created for. For various verbs, these parameters might need adjustment to yield the best possible results.  
 
 If you want to use your own example sentences, you can use the option --verb to specify the verb that you want to use for the valency analysis. The default verb for the given example sentences is "kämpfen". All sentences will still be taken from the directory example_sentences and need the same format as the example sentences given in this repository.
 
-Note that the actual program allows for the specification of various parameters, especially for the K-Means algorithm (e.g. the number of clusters that should be created or the number of clusters that should be deleted). The parameters used in this example were the best parameters according to the evaluation of the group project that the original program was created for. For various verbs, these parameters might need adjustment. For further information, see the documentation.     
+You can specify that only the main sentences containing the given verb should by analysed via the option "--main".
+
+For more detailed information on the dependency trees or the clustering attempts, use the option "--verbose".
+
 
 Theoretical background
 ----------------------
@@ -42,7 +62,18 @@ Each verb in the German language requires complementary phrases providing necess
 
 Dependency trees show the dependencies of each word in a sentence. A determiner, for example, is dependent on a noun as it cannot occur in a sentence without a noun it belongs to. Similarly, phrases in a sentence depend on other phrases or on single words. Ultimately, every phrase depends on the verb in the sentence.
 
-Not every phrase in a dependency tree is an actual complement in the valency frame. Furthermore, dependency trees only contain limited information regarding the type of some complements. Therefore, this program uses the frequency of specific words and the frequency of all complement patterns in the given sentences to try and determine the actual valency frame of a verb. These frequencies are determined via an implementation of the algorithm K-Means. 
+Not every phrase in a dependency tree is an actual complement in the valency frame. Furthermore, dependency trees only contain limited information regarding the type of some complements. Therefore, this program uses the frequency of specific words and the frequency of all complement patterns in the given sentences to try and determine the actual valency frame of a verb. These frequencies are determined via an implementation of the algorithm K-Means.
+
+The program gives the following codes for each complement class in the console output:
+- Ksub = nominative complement
+- Kgen = genetive complement
+- Kdat = dative complement
+- Kakk = accusative complement
+- Kadv = adverbial complement
+- Kprp = prepositional complement
+- Kprd = predicative complement
+- Kvrb = verbativ complement
+
 
 Contact
 -------

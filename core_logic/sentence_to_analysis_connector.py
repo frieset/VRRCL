@@ -7,7 +7,7 @@ from core_logic.dependency_analysis import DependencyAnalysisSubTypeII as DasSbT
 
 import logging
 
-logger = logging.getLogger('ValancyRelationshipRecognizer')
+logger = logging.getLogger('VRRCL')
 
 
 class SentenceAnalysisConnector:

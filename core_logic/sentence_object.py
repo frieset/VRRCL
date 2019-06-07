@@ -4,7 +4,7 @@ from core_logic.sentence_to_analysis_connector import SentenceAnalysisConnector 
 
 import logging
 
-logger = logging.getLogger('ValancyRelationshipRecognizer')
+logger = logging.getLogger('VRRCL')
 
 
 class SentenceObject:

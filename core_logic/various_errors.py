@@ -122,6 +122,8 @@ class ValencyFrameError (Exception):
             self.message = "Fehler beim Aufruf von W-ID in S-ID- to W-ID- to Word-Mapping"
         elif error_code == 5:
             self.message = "Fehler beim Setzen des Valenzrahmens, kein gültiges Dictionary angegeben"
+        elif error_code == 6:
+            self.message = "Fehler beim Setzen des Valenzrahmens, keine Einträge im Valenzrahmen angegeben"
         elif error_code == 7:
             self.message = "Fehler beim Setzen des aktuellen Komplement-Pattern-Dictionaries: leere Signatur angegeben"
         elif error_code == 8:
@@ -142,7 +144,7 @@ class ValencyAnalysisError (Exception):
         if error_code == 1:
             self.message = "Keine Analyse vorhanden"
         elif error_code == 2:
-            self.message = "Falscher Parameter für K-Mean-Aufruf: Zu viele Cluster werden werden entfernt"
+            self.message = "Falscher Parameter für K-Mean-Aufruf: Ungültige Anzahl für zu behaltende Cluster"
         elif error_code == 3:
             self.message = "Falscher Parameter für K-Mean-Aufruf: Nicht genügend Cluster für angegebene Auswahl"
         elif error_code == 4:
