@@ -165,7 +165,7 @@ def initialize_argparser():
                            action="store", dest="kmtwocq", default="4", type=int)
     argparser.add_argument("--kmtwo_mt", help="number of maximum tries for deletion of rare complemet signatures via k-means, default = 10",
                            action="store", dest="kmtwomt", default="10", type=int)
-    argparser.add_argument("--kmtwo_ck", help="number of clusters that should be kept during deletion of rare complemtn class"
+    argparser.add_argument("--kmtwo_ck", help="number of clusters that should be kept during deletion of rare complement class "
                             "signatures, default = 3", action="store", dest="kmtwock", default="3", type=int)
     argparser.add_argument("--no_kmtwo", help="no further postprocessing will be done after deletion of "
                                 "multiple complements", action="store_true")
